@@ -1,4 +1,4 @@
-package src.main.java.com.web.urbinoennasri.projet_web;
+package src.main.java.com.web.urbinoennasri.projet_web.model;
 
 
 @Entity
@@ -12,11 +12,29 @@ public class Users {
     private String mail;
     @Column(name = "password")
     private String password;
-    @Column(name = "pseudo")
-    private String pseudo;
+    @Column(name = "nom")
+    private String nom;
+    @Column(name = "prenom")
+    private String prenom;
 
     public int getIdUsers() {
         return idUsers;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
     }
 
     public void setIdUsers(int idUsers) {
@@ -39,11 +57,4 @@ public class Users {
         this.password = password;
     }
 
-    public String getPseudo() {
-        return pseudo;
-    }
-
-    public void setPseudo(String pseudo) {
-        this.pseudo = pseudo;
-    }
 }
