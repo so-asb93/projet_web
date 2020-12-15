@@ -1,10 +1,10 @@
-package com.web.urbinoennasri.projet_web;
+package com.example.urbinoennasri;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ProjetWebApplicationTests {
+class UrbinoennasriApplicationTests {
 
 	@Test
 	void contextLoads() {

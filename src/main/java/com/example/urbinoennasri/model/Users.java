@@ -1,5 +1,7 @@
-package src.main.java.com.web.urbinoennasri.projet_web.model;
+package com.example.urbinoennasri.model;
 
+
+import javax.persistence.*;
 
 @Entity
 public class Users {

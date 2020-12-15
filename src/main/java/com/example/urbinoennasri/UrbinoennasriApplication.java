@@ -1,13 +1,13 @@
-package com.web.urbinoennasri.projet_web;
+package com.example.urbinoennasri;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProjetWebApplication {
+public class UrbinoennasriApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProjetWebApplication.class, args);
+		SpringApplication.run(UrbinoennasriApplication.class, args);
 	}
 
 }
