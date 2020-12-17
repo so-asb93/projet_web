@@ -18,4 +18,9 @@ public class IService implements Service{
 
         return listSondages;
     }
+
+
+    public void supprime (int sondageId) {
+        repository.supprime(sondageId);
+    }
 }

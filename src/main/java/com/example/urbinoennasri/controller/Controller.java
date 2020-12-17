@@ -5,6 +5,7 @@ import com.example.urbinoennasri.model.Sondages;
 import com.example.urbinoennasri.service.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -46,5 +47,15 @@ public class Controller {
         return modelAndView;
     } // Requête pour afficher une page hmtl
 
+    @RequestMapping(value = "/accueil_sondage/{sondageId}", method = RequestMethod.DELETE)
+    public ModelAndView deleteSondage(@PathVariable("sondageId") int sondageId) {
+
+        ModelAndView modelAndView = new ModelAndView();
+
+        service.supprime(sondageId);
+
+        modelAndView.setViewName("accueil_sondage");
+        return modelAndView;
+    } // Requête pour supprimer
 
   }

@@ -12,4 +12,7 @@ public interface Repository extends JpaRepository<Sondages,Integer> {
     @Query(value = "select * from sondages", nativeQuery = true)
     public List<Sondages> findSondages () ;
 
+    @Query(value = "DELETE FROM sondages WHERE idsondages=?1", nativeQuery = true)
+    public void supprime (int sondageId) ;
+
 }
