@@ -1,5 +1,9 @@
 package com.example.urbinoennasri.service;
 
-public interface Service {
+import com.example.urbinoennasri.model.Sondages;
 
+import java.util.List;
+
+public interface Service {
+    public List<Sondages> findSondages ();
 }

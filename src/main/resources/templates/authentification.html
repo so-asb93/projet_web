@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
 
 <body>
 
@@ -56,13 +59,15 @@
 
 		<h1>Bienvenue</h1>
 		
-			<form method="post">
+			<form th:action="@{/authentification}" method="post">
 				<input type="text" name="u" placeholder="Adresse mail" required="required" />
 				<input type="password" name="p" placeholder="Mot de passe" required="required" />
 
-				<a href="accueil_sondage.html">
+<!--				<a href="accueil_sondage.html">-->
 				<nav class="btn btn-primary btn-block btn-large">
-				<span class=text_connexion>Connexion</span>
+					<input id="submit" type="submit" value="Log in" />
+
+<!--					<span class=text_connexion>Connexion</span>-->
 					<STYLE>a .text_connexion {color: white; font-size: 100%;} </STYLE>
 				</nav>
 				</a>
