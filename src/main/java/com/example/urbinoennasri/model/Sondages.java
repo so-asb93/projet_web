@@ -9,7 +9,7 @@ public class Sondages {
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private int idsondages;
 
-        @Column(name = "userid")
+        @JoinColumn(foreignKey = @ForeignKey(name = "FK_userid"))
         private int userid;
         @Column(name = "lieu1")
         private String lieu1;

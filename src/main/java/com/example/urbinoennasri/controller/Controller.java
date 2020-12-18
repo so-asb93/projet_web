@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+import com.example.urbinoennasri.model.Users;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,5 +59,24 @@ public class Controller {
         modelAndView.setViewName("accueil_sondage");
         return modelAndView;
     } // Requête pour supprimer
+
+    @RequestMapping(value = "/inscription", method = RequestMethod.GET)
+    public ModelAndView showInscription() {
+        ModelAndView modelAndView = new ModelAndView();
+        Users utilisateur = new Users();
+        modelAndView.addObject("utilisateur", utilisateur);
+        modelAndView.setViewName("inscription");
+        return modelAndView;
+    } // Requête pour afficher une page hmtl
+
+    @RequestMapping(value = "/inscription", method = RequestMethod.POST)
+    public ModelAndView inscription(Users utilisateur) {
+        ModelAndView modelAndView = new ModelAndView();
+
+        service.sauvegarde(utilisateur);
+
+        modelAndView.setViewName("inscription");
+        return modelAndView;
+    } // Requête pour afficher une page hmtl
 
   }

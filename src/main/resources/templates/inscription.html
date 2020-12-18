@@ -1,4 +1,6 @@
-<STYLE>body { 
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<STYLE>body {
 	width: 100%;
 	height:100%;
 	font-family: 'Open Sans', sans-serif;
@@ -52,13 +54,13 @@
 	<link rel="stylesheet" type="text/css" href="test_style.css" media="all" />
 	<h1>Nouvel utilisateur</h1>
 	
-    <form method="post">
-		<input type="text" name="u" placeholder="Prenom" required="required" />
-		<input type="text" name="u" placeholder="Nom de famille" required="required" />
-    	<input type="text" name="u" placeholder="Adresse mail" required="required" />
-        <input type="password" name="p" placeholder="Mot de passe" required="required" />
-		<input type="password" name="p" placeholder="Confirmation du mot de passe" required="required" />
-
+    <form method="post"th:action="@{/inscription}" th:object="${utilisateur}">
+		<input type="text" name="prenomI" placeholder="Prenom" required="required" th:field="*{prenom}" />
+		<input type="text" name="nomI" placeholder="Nom de famille" required="required" th:field="*{nom}" />
+    	<input type="text" name="mailI" placeholder="Adresse mail" required="required" th:field="*{mail}" />
+        <input type="password" name="passwordI" placeholder="Mot de passe" required="required" th:field="*{password}" />
+		<!--<input type="password" name="p" placeholder="Confirmation du mot de passe" required="required" />
+-->
 			<a href="authentification.html">
 				<nav class="btn btn-primary btn-block btn-large">
 				<span class=text_inscription>Inscription</span>
@@ -68,7 +70,7 @@
 		
 		<nav class="btn_deux">
 		<br>
-			<a href="authentification.html">Revenir à la page précédente</a>
+			<a href="/authentification">Revenir à la page précédente</a>
 			<STYLE>.btn_deux a {text-decoration: none; color: grey; font-size: 70%;} </STYLE>
 			<STYLE>.btn_deux:hover a {text-decoration: underline; color: grey; font-size: 70%;} </STYLE>
 		</nav>
@@ -77,3 +79,4 @@
 
 	
 </div>
+</html>

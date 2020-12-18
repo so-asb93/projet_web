@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 @org.springframework.stereotype.Repository
-public interface Repository extends JpaRepository<Sondages,Integer> {
+public interface Srepository extends JpaRepository<Sondages,Integer> {
 
     @Query(value = "select * from sondages", nativeQuery = true)
     public List<Sondages> findSondages () ;
