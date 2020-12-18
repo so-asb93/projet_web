@@ -18,3 +18,10 @@ Dans la partie inscripiton, il y a également un bouton "revenir à la page pré
 2.Partie sondage
 
 Une fois connecté, une page
+
+
+<img width="948" alt="sondage1" src="https://user-images.githubusercontent.com/66034298/102663344-f7909880-4180-11eb-9728-b5a62396f8f0.PNG">
+
+<img width="947" alt="sondage2" src="https://user-images.githubusercontent.com/66034298/102663351-fb241f80-4180-11eb-8c65-96da8071c77d.PNG">
+
+![sondage3](https://user-images.githubusercontent.com/66034298/102663359-feb7a680-4180-11eb-8d8f-31e8a94914ad.PNG)
