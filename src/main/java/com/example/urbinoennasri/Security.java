@@ -26,8 +26,8 @@ http
                 .loginPage("/authentification")
                 //.failureUrl("/errorfile?error=true")
                 .defaultSuccessUrl("/accueil_sondage")
-                .usernameParameter("u")
-                .passwordParameter("p")
+                //.usernameParameter("u")
+                //.passwordParameter("p")
                 .and()
 // logout
                 .logout()
