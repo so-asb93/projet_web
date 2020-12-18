@@ -54,17 +54,18 @@
 	<link rel="stylesheet" type="text/css" href="test_style.css" media="all" />
 	<h1>Nouvel utilisateur</h1>
 	
-    <form method="post"th:action="@{/inscription}" th:object="${utilisateur}">
+    <form method="post"th:action="@{/inscription}" th:object="${users}">
 		<input type="text" name="prenomI" placeholder="Prenom" required="required" th:field="*{prenom}" />
 		<input type="text" name="nomI" placeholder="Nom de famille" required="required" th:field="*{nom}" />
     	<input type="text" name="mailI" placeholder="Adresse mail" required="required" th:field="*{mail}" />
         <input type="password" name="passwordI" placeholder="Mot de passe" required="required" th:field="*{password}" />
 		<!--<input type="password" name="p" placeholder="Confirmation du mot de passe" required="required" />
 -->
-			<a href="authentification.html">
+<!--			<a href="authentification.html">-->
 				<nav class="btn btn-primary btn-block btn-large">
-				<span class=text_inscription>Inscription</span>
-					<STYLE>a .text_inscription {color: white; font-size: 100%;} </STYLE>
+					<button type="submit" class="btn btn-primary btn-block">Inscription</button>
+<!--				<span class=text_inscription>Inscription</span>-->
+<!--					<STYLE>a .text_inscription {color: white; font-size: 100%;} </STYLE>-->
 				</nav>
 			</a>
 		

@@ -63,17 +63,17 @@ public class Controller {
     @RequestMapping(value = "/inscription", method = RequestMethod.GET)
     public ModelAndView showInscription() {
         ModelAndView modelAndView = new ModelAndView();
-        Users utilisateur = new Users();
-        modelAndView.addObject("utilisateur", utilisateur);
+        Users users = new Users();
+        modelAndView.addObject("users", users);
         modelAndView.setViewName("inscription");
         return modelAndView;
     } // Requête pour afficher une page hmtl
 
     @RequestMapping(value = "/inscription", method = RequestMethod.POST)
-    public ModelAndView inscription(Users utilisateur) {
+    public ModelAndView inscription(Users users) {
         ModelAndView modelAndView = new ModelAndView();
-
-        service.sauvegarde(utilisateur);
+        System.out.println("in controller");
+        service.sauvegarde(users);
 
         modelAndView.setViewName("inscription");
         return modelAndView;

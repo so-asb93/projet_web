@@ -8,7 +8,7 @@ public class Users {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idUsers;
+    private int id_users;
 
     @Column(name = "mail")
     private String mail;
@@ -20,27 +20,11 @@ public class Users {
     private String prenom;
 
     public int getIdUsers() {
-        return idUsers;
+        return id_users;
     }
 
-    public String getNom() {
-        return nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    public String getPrenom() {
-        return prenom;
-    }
-
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
-    }
-
-    public void setIdUsers(int idUsers) {
-        this.idUsers = idUsers;
+    public void setIdUsers(int id_users) {
+        this.id_users = id_users;
     }
 
     public String getMail() {
@@ -59,4 +43,19 @@ public class Users {
         this.password = password;
     }
 
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
 }
