@@ -13,23 +13,22 @@ public class Security extends WebSecurityConfigurerAdapter {
     public void configure(HttpSecurity http) throws Exception {
 http
                 .authorizeRequests()
-                .antMatchers("/").permitAll()
+                .antMatchers("/", "/accueil_sondage2").permitAll()
                 .antMatchers("/authentification2").permitAll()
                 .antMatchers("/accueil_sondage2").permitAll()
                 .antMatchers("/inscription2").permitAll()
                 .antMatchers("/creation_sondage2").permitAll()
 
-                 //.antMatchers("/register").permitAll()
-//                .antMatchers("/accueil_sondage/**").hasAnyAuthority("SUPER_USER", "ADMIN_USER", "SITE_USER")
-//                .anyRequest().authenticated()
+                .anyRequest().authenticated()
                 .and()
 // form login
                 .csrf().disable().formLogin()
                 .loginPage("/authentification2")
-                //.failureUrl("/errorfile?error=true")
+                .permitAll()
+                .failureUrl("/accueil_sondage2")
                 .defaultSuccessUrl("/accueil_sondage2")
-                .usernameParameter("u")
-                .passwordParameter("p")
+                .usernameParameter("mail")
+                .passwordParameter("password")
                 .and()
 // logout
                 .logout()
@@ -38,4 +37,5 @@ http
                 .exceptionHandling()
                 .accessDeniedPage("/access-denied");
     }
+
 }
