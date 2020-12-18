@@ -17,6 +17,8 @@ http
                 .antMatchers("/authentification").permitAll()
                 .antMatchers("/accueil_sondage").permitAll()
                 .antMatchers("/inscription").permitAll()
+                .antMatchers("/creation_sondage2").permitAll()
+
                  //.antMatchers("/register").permitAll()
 //                .antMatchers("/accueil_sondage/**").hasAnyAuthority("SUPER_USER", "ADMIN_USER", "SITE_USER")
 //                .anyRequest().authenticated()
@@ -26,8 +28,8 @@ http
                 .loginPage("/authentification")
                 //.failureUrl("/errorfile?error=true")
                 .defaultSuccessUrl("/accueil_sondage")
-                //.usernameParameter("u")
-                //.passwordParameter("p")
+                .usernameParameter("u")
+                .passwordParameter("p")
                 .and()
 // logout
                 .logout()

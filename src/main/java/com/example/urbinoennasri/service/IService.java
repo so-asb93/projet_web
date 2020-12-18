@@ -26,6 +26,7 @@ public class IService implements Service{
 
 
     public void supprime (int sondageId) {
+
         srepository.supprime(sondageId);
     }
 
@@ -35,5 +36,9 @@ public class IService implements Service{
 
         urepository.save(utilisateur);
     }
+    @Override
+    public void createSondage (Sondages sondage) {
 
+        srepository.save(sondage);
+    }
 }

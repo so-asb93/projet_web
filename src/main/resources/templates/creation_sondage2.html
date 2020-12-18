@@ -55,13 +55,13 @@
 	<link rel="stylesheet" type="text/css" href="test_style.css" media="all" />
 	<h1>Création d'un sondage</h1>
 	
-    <form method="post"th:action="@{/ccreation_sondage}" th:object="${users}">
-		<input type="text" name="prenomI" placeholder="Lieu: proposition 1" required="required" th:field="*{lieu1}" />
-		<input type="text" name="nomI" placeholder="Lieu: proposition 2" required="required" th:field="*{lieu2}" />
-    	<input type="text" name="mailI" placeholder="Lieu: proposition 3" required="required" th:field="*{lieu3}" />
-		<input type="date" name="prenomI" placeholder="Date: proposition 1" required="required" th:field="*{date1}" />
-		<input type="date" name="nomI" placeholder="Date: proposition 2" required="required" th:field="*{date2}" />
-    	<input type="date" name="mailI" placeholder="Date: proposition 3" required="required" th:field="*{date3}" />
+    <form method="post" th:action="@{/creation_sondage2}" th:object="${sondages}">
+		<input type="text" name="lieu1" placeholder="Lieu: proposition 1" th:field="*{lieu1}" />
+		<input type="text" name="lieu2" placeholder="Lieu: proposition 2" th:field="*{lieu2}" />
+    	<input type="text" name="lieu3" placeholder="Lieu: proposition 3" th:field="*{lieu3}" />
+		<input type="date" name="date1" placeholder="Date: proposition 1" th:field="*{date1}" />
+		<input type="date" name="date2" placeholder="Date: proposition 2" th:field="*{date2}" />
+    	<input type="date" name="date3" placeholder="Date: proposition 3" th:field="*{date3}" />
 
 		<!--<input type="password" name="p" placeholder="Confirmation du mot de passe" required="required" />
 -->
