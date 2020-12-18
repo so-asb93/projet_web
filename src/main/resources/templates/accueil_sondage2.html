@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<STYLE>body {
+<STYLE>body { 
 	width: 100%;
 	height:100%;
 	font-family: 'Open Sans', sans-serif;
@@ -46,38 +46,96 @@
 
 <STYLE>* {text-decoration:none; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box;} </STYLE>
 <STYLE>html {width: 100%; height:100%; overflow:hidden;} </STYLE>
+<body>
+					<nav class="btn_trois">
+					<a href="authentification.html">Deconnexion</a>
+					<STYLE>.btn_trois a {text-decoration: none; color: white; font-size: 100%;} </STYLE>
+					<STYLE>.btn_trois:hover a {text-decoration: underline; color: white; font-size: 100%;} </STYLE>
+				</nav>
 
 <div class="login">
-<STYLE>.login {	position: absolute; top: 40%; left: 50%; margin: -150px 0 0 -150px; width:300px; height:300px;} </STYLE>
+<!-- <STYLE>.login {	position: absolute; top: 30%; left: 50%; margin: -150px 0 0 -150px; width:300px; height:300px;} </STYLE> -->
 <STYLE>.login h1 {color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:center;} </STYLE>
+<h1>Urbiso Sondage</h1>
+<br>
+<br>
 
 	<link rel="stylesheet" type="text/css" href="test_style.css" media="all" />
-	<h1>Nouvel utilisateur</h1>
 	
-    <form method="post"th:action="@{/inscription}" th:object="${users}">
-		<input type="text" name="prenomI" placeholder="Prenom" required="required" th:field="*{prenom}" />
-		<input type="text" name="nomI" placeholder="Nom de famille" required="required" th:field="*{nom}" />
-    	<input type="text" name="mailI" placeholder="Adresse mail" required="required" th:field="*{mail}" />
-        <input type="password" name="passwordI" placeholder="Mot de passe" required="required" th:field="*{password}" />
-		<!--<input type="password" name="p" placeholder="Confirmation du mot de passe" required="required" />
--->
-<!--			<a href="authentification.html">-->
-				<nav class="btn btn-primary btn-block btn-large">
-					<button type="submit" class="bouton">Inscription</button>
-<!--				<span class=text_inscription>Inscription</span>-->
-<!--					<STYLE>a .text_inscription {color: white; font-size: 100%;} </STYLE>-->
-				</nav>
+<a href="creation_sondage.html">
+				<!-- <nav class="btn btn-primary btn-block btn-large"> -->
+				<button type="submit" class="btn_creation_sondage">Créer un nouveau sondage</button>
+
+					<STYLE>a .btn_creation_sondage {font-family:'Open Sans', sans-serif; border-radius: 15px; background-color: #4a77d4; color: white; font-size: 100%; width:15%; text-align:center; -webkit-gradient(linear, 0 0, 0 100%, from(#6eb6de), to(#4a77d4))} </STYLE>
+					<STYLE>a .btn_creation_sondage:hover {font-family:'Open Sans', sans-serif; border-radius: 15px; cursor:pointer; background-color: lightblue; color: black; font-size: 100%; width:15%; text-align:center; -webkit-gradient(linear, 0 0, 0 100%, from(#6eb6de), to(#4a77d4))} </STYLE>
+				<!-- </nav> -->
 			</a>
+			
+<div class="liste_sondage"> Liste des sondages:
+<STYLE>.liste_sondage {text-align: center; font-family:'Open Sans', sans-serif; color:white; font-size:180%; letter-spacing:1px;} </STYLE>
+<br>
+<br>
+ </div>
+			
+<form method="post">
+	<hr>
+	<STYLE>form {width:100%; text-align: center;}</STYLE>
+
+				<font class="titre_bloc">Sondage: [Nom du sondage]</font>
+				<STYLE>form .titre_bloc { color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:center;} </STYLE>
+				<br>
+				
+				<font  class="faitpar">Fait par [Nom de l'auteur]</font>	
+				<STYLE>form .faitpar {color: grey; font-size: 80%;} </STYLE>
+				<br>
+				<br>
+
+				<font  class="activite">Activité: [Nom de l'activité]</font>	
+				<STYLE>form .activite { color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:center;} </STYLE>
+				<br>
+				<br>
+				
+					
+			<p classe="choix_lieu">
+				<STYLE>p {color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px;} </STYLE>
+				<STYLE>input.input {width: 20px;} </STYLE>
+					<label for="lieu">Proposition de lieu pour l'activité:</label> <br>
+					<input class="input" type="radio" value="choix1" name="choix1" />Choix 1
+					<input class="input" type="radio" value="choix2" name="choix2" />Choix 2
+					<input class="input" type="radio" value="choix3" name="choix3" />Choix 3
+			</p>
+			
+			<p classe="choix_date">
+				<STYLE>p {color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px;} </STYLE>
+					<label for="date">Proposition de date pour l'activité:</label> <br>
+					<input class="input" type="radio" value="choix1" name="choix1" />Choix 1
+					<input class="input" type="radio" value="choix2" name="choix2" />Choix 2
+					<input class="input" type="radio" value="choix3" name="choix3" />Choix 3
+			</p>
+			
+
+			<a href="authentification.html">
+				<!-- <nav class="btn btn-primary btn-block btn-large"> -->
+				<button type="submit" class="text_inscription">Voter</button>
+
+					<STYLE>a .text_inscription {font-family:'Open Sans', sans-serif; border-radius: 15px; background-color: #4a77d4; color: white; font-size: 100%; width:10%; text-align:center; -webkit-gradient(linear, 0 0, 0 100%, from(#6eb6de), to(#4a77d4))} </STYLE>
+					<STYLE>a .text_inscription:hover {font-family:'Open Sans', sans-serif; border-radius: 15px; cursor:pointer; background-color: lightblue; color: black; font-size: 100%; width:10%; text-align:center; -webkit-gradient(linear, 0 0, 0 100%, from(#6eb6de), to(#4a77d4))} </STYLE>
+				<!-- </nav> -->
+			</a>
+			
+		<hr>
 		
-		<nav class="btn_deux">
+		</form>
+
+
+
+	
+
 		<br>
-			<a href="/authentification">Revenir à la page précédente</a>
-			<STYLE>.btn_deux a {text-decoration: none; color: grey; font-size: 70%;} </STYLE>
-			<STYLE>.btn_deux:hover a {text-decoration: underline; color: grey; font-size: 70%;} </STYLE>
-		</nav>
-	</form>
+		<br>
 		
 
 	
 </div>
-</html>
+
+</body>

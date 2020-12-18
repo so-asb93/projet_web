@@ -1,8 +1,17 @@
 <!DOCTYPE html>
-
-<html xmlns:th="http://www.thymeleaf.org">
-
-<body>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<STYLE>body {
+	width: 100%;
+	height:100%;
+	font-family: 'Open Sans', sans-serif;
+	background: #092756;
+	background: -moz-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%),-moz-linear-gradient(top,  rgba(57,173,219,.25) 0%, rgba(42,60,87,.4) 100%), -moz-linear-gradient(-45deg,  #670d10 0%, #092756 100%);
+	background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -webkit-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -webkit-linear-gradient(-45deg,  #670d10 0%,#092756 100%);
+	background: -o-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -o-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -o-linear-gradient(-45deg,  #670d10 0%,#092756 100%);
+	background: -ms-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -ms-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -ms-linear-gradient(-45deg,  #670d10 0%,#092756 100%);
+	background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), linear-gradient(to bottom,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), linear-gradient(135deg,  #670d10 0%,#092756 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3E1D6D', endColorstr='#092756',GradientType=1 );
+} </STYLE>
 
 <STYLE>input {	width: 100%; 
 	margin-bottom: 10px; 
@@ -22,7 +31,6 @@
 	-ms-transition: box-shadow .5s ease;
 	transition: box-shadow .5s ease;
 } </STYLE>
-
 <STYLE>input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); } </STYLE>
 
 <STYLE>.btn {display: inline-block; *display: inline; *zoom: 1; padding: 4px 10px 4px; margin-bottom: 0; font-size: 13px; line-height: 18px; color: #333333; text-align: center;text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75); vertical-align: middle; background-color: #f5f5f5; background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6); background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6)); background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6); background-image: -o-linear-gradient(top, #ffffff, #e6e6e6); background-image: linear-gradient(top, #ffffff, #e6e6e6); background-repeat: repeat-x; filter: progid:dximagetransform.microsoft.gradient(startColorstr=#ffffff, endColorstr=#e6e6e6, GradientType=0); border-color: #e6e6e6 #e6e6e6 #e6e6e6; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); border: 1px solid #e6e6e6; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); cursor: pointer; *margin-left: .3em;} </STYLE>
@@ -37,57 +45,43 @@
 
 
 <STYLE>* {text-decoration:none; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box;} </STYLE>
-<STYLE>html {width: 100%; height:100%; overflow:hidden;} </STYLE>
+<STYLE>html {width: 100%; display:block; width: 100%; height:100%; overflow:hidden;} </STYLE>
 
+<div class="login">
+<STYLE>.login {	position: absolute; top: 30%; left: 50%; margin: -150px 0 0 -150px; width:300px; height:300px;} </STYLE>
+<STYLE>.login h1 {color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:center;} </STYLE>
+<STYLE>button.bouton {}</STYLE>
 
-<STYLE>body { 
-	width: 100%;
-	height:100%;
-	font-family: 'Open Sans', sans-serif;
-	background: #092756;
-	background: -moz-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%),-moz-linear-gradient(top,  rgba(57,173,219,.25) 0%, rgba(42,60,87,.4) 100%), -moz-linear-gradient(-45deg,  #670d10 0%, #092756 100%);
-	background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -webkit-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -webkit-linear-gradient(-45deg,  #670d10 0%,#092756 100%);
-	background: -o-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -o-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -o-linear-gradient(-45deg,  #670d10 0%,#092756 100%);
-	background: -ms-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -ms-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -ms-linear-gradient(-45deg,  #670d10 0%,#092756 100%);
-	background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), linear-gradient(to bottom,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), linear-gradient(135deg,  #670d10 0%,#092756 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3E1D6D', endColorstr='#092756',GradientType=1 );
-} </STYLE>
-
-	<div class="login">
-		<STYLE>.login {	position: absolute; top: 40%; left: 50%; margin: -150px 0 0 -150px; width:300px; height:300px;} </STYLE>
-		<STYLE>.login h1 {color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:center;} </STYLE>
-		<STYLE> </STYLE>
-
-		<h1>Bienvenue</h1>
+	<link rel="stylesheet" type="text/css" href="test_style.css" media="all" />
+	<h1>Nouvel utilisateur</h1>
+	
+    <form method="post"th:action="@{/inscription}" th:object="${users}">
+		<input type="text" name="prenomI" placeholder="Prenom" required="required" th:field="*{prenom}" />
+		<input type="text" name="nomI" placeholder="Nom de famille" required="required" th:field="*{nom}" />
+    	<input type="text" name="mailI" placeholder="Adresse mail" required="required" th:field="*{mail}" />
+        <input type="password" name="passwordI" placeholder="Mot de passe" required="required" th:field="*{password}" />
+		<!--<input type="password" name="p" placeholder="Confirmation du mot de passe" required="required" />
+-->
+<!--			<a href="authentification.html">-->
+		<a href="authentification.html">
+				<nav class="bouton">
+					<button type="submit" class="bouton">Inscription</button>
+					<STYLE>button.bouton {height:40px; font-family:'Open Sans', sans-serif; border-radius: 15px; background-color: #4a77d4; color: white; font-size: 100%; width:100%; text-align:center; -webkit-gradient(linear, 0 0, 0 100%, from(#6eb6de), to(#4a77d4))} </STYLE>
+					<STYLE>button.bouton:hover {height:40px; font-family:'Open Sans', sans-serif; border-radius: 15px; cursor:pointer; background-color: lightblue; color: black; font-size: 100%; width:100%; text-align:center; -webkit-gradient(linear, 0 0, 0 100%, from(#6eb6de), to(#4a77d4))} </STYLE>
+<!--				<span class=text_inscription>Inscription</span>-->
+<!--					<STYLE>a .text_inscription {color: white; font-size: 100%;} </STYLE>-->
+				</nav>
+			</a>
 		
-			<form th:action="@{/authentification}" method="post">
-				<input type="text" name="u" placeholder="Adresse mail" required="required" />
-				<input type="password" name="p" placeholder="Mot de passe" required="required" />
-
-<!--				<a href="accueil_sondage.html">-->
-				<nav class="btn btn-primary btn-block btn-large">
-					<input id="submit" type="submit" value="Log in" />
-
-
-<!--					<span class=text_connexion>Connexion</span>-->
-					<STYLE>a .text_connexion {color: white; font-size: 100%;} </STYLE>
-				</nav>
-				</a>
-				<br>
-<!--				<nav class="btn_deux">-->
-					<!-- <a href="mdp_oublie.html">Mot de passe oublié</a> -->
-					<!-- <STYLE>.btn_deux a {text-decoration: none; color: grey; font-size: 70%;} </STYLE> -->
-					<!-- <STYLE>.btn_deux:hover a {text-decoration: underline; color: grey; font-size: 70%;} </STYLE> -->
-					<!-- <br> -->
-				<!-- </nav> -->
-				<nav class="btn_trois">
-					<a href="/inscription">Vous n'êtes pas inscrit ? Incrivez vous !</a>
-					<STYLE>.btn_trois a {text-decoration: none; color: grey; font-size: 70%;} </STYLE>
-					<STYLE>.btn_trois:hover a {text-decoration: underline; color: grey; font-size: 70%;} </STYLE>
-				</nav>
-			</form>
-			
+		<nav class="btn_deux">
+		<br>
+			<a href="authentification.html">Revenir à la page précédente</a>
+			<STYLE>.btn_deux a {text-decoration: none; color: grey; font-size: 70%;} </STYLE>
+			<STYLE>.btn_deux:hover a {text-decoration: underline; color: grey; font-size: 70%;} </STYLE>
+		</nav>
+	</form>
+		
 
 	
-	</div>
-</body>
+</div>
+</html>

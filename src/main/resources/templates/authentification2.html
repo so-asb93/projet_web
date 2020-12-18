@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <html xmlns:th="http://www.thymeleaf.org">
 
 <body>
@@ -56,7 +56,7 @@
 	<div class="login">
 		<STYLE>.login {	position: absolute; top: 40%; left: 50%; margin: -150px 0 0 -150px; width:300px; height:300px;} </STYLE>
 		<STYLE>.login h1 {color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:center;} </STYLE>
-		<STYLE> </STYLE>
+		<STYLE>input#submit {background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6)} </STYLE>
 
 		<h1>Bienvenue</h1>
 		
@@ -65,13 +65,14 @@
 				<input type="password" name="p" placeholder="Mot de passe" required="required" />
 
 <!--				<a href="accueil_sondage.html">-->
-				<nav class="btn btn-primary btn-block btn-large">
-					<input id="submit" type="submit" value="Log in" />
-
+				<!-- <nav class="btn btn-primary btn-block btn-large"> -->
+					<input id="submit" type="submit" value="Connexion" />
+					<STYLE>input#submit {height:40px; font-family:'Open Sans', sans-serif; border-radius: 15px; background-color: #4a77d4; color: white; font-size: 100%; width:100%; text-align:center; -webkit-gradient(linear, 0 0, 0 100%, from(#6eb6de), to(#4a77d4))} </STYLE>
+					<STYLE>input#submit:hover {height:40px; font-family:'Open Sans', sans-serif; border-radius: 15px; cursor:pointer; background-color: lightblue; color: black; font-size: 100%; width:100%; text-align:center; -webkit-gradient(linear, 0 0, 0 100%, from(#6eb6de), to(#4a77d4))} </STYLE>
 
 <!--					<span class=text_connexion>Connexion</span>-->
 					<STYLE>a .text_connexion {color: white; font-size: 100%;} </STYLE>
-				</nav>
+				<!-- </nav> -->
 				</a>
 				<br>
 <!--				<nav class="btn_deux">-->
@@ -81,7 +82,7 @@
 					<!-- <br> -->
 				<!-- </nav> -->
 				<nav class="btn_trois">
-					<a href="/inscription">Vous n'êtes pas inscrit ? Incrivez vous !</a>
+					<a href="inscription.html">Vous n'êtes pas inscrit ? Incrivez vous !</a>
 					<STYLE>.btn_trois a {text-decoration: none; color: grey; font-size: 70%;} </STYLE>
 					<STYLE>.btn_trois:hover a {text-decoration: underline; color: grey; font-size: 70%;} </STYLE>
 				</nav>
