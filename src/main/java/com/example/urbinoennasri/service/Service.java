@@ -8,6 +8,9 @@ import java.util.List;
 public interface Service {
     public List<Sondages> findSondages ();
     public void createSondage(Sondages sondage);
-    public void supprime(int sondageId);
+    public void supprime (Sondages sondage);
+    public Sondages searchTheSondage(int sondageId);
     public void sauvegarde(Users utilisateur);
+
+
 }

@@ -14,9 +14,9 @@ public class Security extends WebSecurityConfigurerAdapter {
 http
                 .authorizeRequests()
                 .antMatchers("/").permitAll()
-                .antMatchers("/authentification").permitAll()
-                .antMatchers("/accueil_sondage").permitAll()
-                .antMatchers("/inscription").permitAll()
+                .antMatchers("/authentification2").permitAll()
+                .antMatchers("/accueil_sondage2").permitAll()
+                .antMatchers("/inscription2").permitAll()
                 .antMatchers("/creation_sondage2").permitAll()
 
                  //.antMatchers("/register").permitAll()
@@ -25,9 +25,9 @@ http
                 .and()
 // form login
                 .csrf().disable().formLogin()
-                .loginPage("/authentification")
+                .loginPage("/authentification2")
                 //.failureUrl("/errorfile?error=true")
-                .defaultSuccessUrl("/accueil_sondage")
+                .defaultSuccessUrl("/accueil_sondage2")
                 .usernameParameter("u")
                 .passwordParameter("p")
                 .and()

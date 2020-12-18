@@ -48,7 +48,7 @@
 <STYLE>html {width: 100%; height:100%;} </STYLE>
 <body>
 					<nav class="btn_trois">
-					<a href="authentification.html">Deconnexion</a>
+					<a href="/authentification2">Deconnexion</a>
 					<STYLE>.btn_trois a {text-decoration: none; color: white; font-size: 100%;} </STYLE>
 					<STYLE>.btn_trois:hover a {text-decoration: underline; color: white; font-size: 100%;} </STYLE>
 				</nav>
@@ -99,29 +99,57 @@
 			<p classe="choix_lieu">
 				<STYLE>p {color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px;} </STYLE>
 				<STYLE>input.input {width: 20px;} </STYLE>
-					<label id="lieu">Proposition de lieu pour l'activité:</label> <br>
-					<input class="input" for="lieu" type="radio" value="choix1" name="choix1" />Choix 1
-					<input class="input" for="lieu" type="radio" value="choix2" name="choix2" />Choix 2
-					<input class="input" for="lieu" type="radio" value="choix3" name="choix3" />Choix 3
+				<STYLE>label {color: #fff;} </STYLE>
+				<p>Proposition de lieu pour l'activité:</p> <br>
+
+				<div>
+					<label id="lieu1" th:text="${sondage.lieu1}" /> <br>
+					<input class="input" for="lieu1" type="radio" value="choix1" name="choix1" />
+				</div>
+
+				<div>
+					<label id="lieu2" th:text="${sondage.lieu2}" /> <br>
+					<input class="input" for="lieu2" type="radio" value="choix2" name="choix2" />
+				</div>
+
+				<div>
+					<label id="lieu3" th:text="${sondage.lieu3}" /> <br>
+					<input class="input" for="lieu3" type="radio" value="choix3" name="choix3" />
+				</div>
+
 			</p>
 			
 			<p classe="choix_date">
 				<STYLE>p {color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px;} </STYLE>
-					<label id="date">Proposition de date pour l'activité:</label> <br>
-					<input class="input" for="date" type="radio" value="choix1" name="choix1" />Choix 1
-					<input class="input" for="date" type="radio" value="choix2" name="choix2" />Choix 2
-					<input class="input" for="date" type="radio" value="choix3" name="choix3" />Choix 3
+				<STYLE>label {color: #fff;} </STYLE>
+					<p>Proposition de date pour l'activité:</p> <br>
+				<div>
+					<label id="date1" th:text="${sondage.date1}" /> <br>
+					<input class="input" for="date1" type="radio" value="choix1" name="choix1" />
+				</div>
+
+				<div>
+					<label id="date2" th:text="${sondage.date2}" /> <br>
+					<input class="input" for="date2" type="radio" value="choix2" name="choix2" />
+				</div>
+
+				<div>
+					<label id="date3" th:text="${sondage.date3}" /> <br>
+					<input class="input" for="date3" type="radio" value="choix3" name="choix3" />
+				</div>
+
 			</p>
-			
 
-			<a href="authentification.html">
-				<!-- <nav class="btn btn-primary btn-block btn-large"> -->
-				<button type="submit" class="text_inscription">Voter</button>
-
-					<STYLE>a .text_inscription {font-family:'Open Sans', sans-serif; border-radius: 15px; background-color: #4a77d4; color: white; font-size: 100%; width:10%; text-align:center; -webkit-gradient(linear, 0 0, 0 100%, from(#6eb6de), to(#4a77d4))} </STYLE>
-					<STYLE>a .text_inscription:hover {font-family:'Open Sans', sans-serif; border-radius: 15px; cursor:pointer; background-color: lightblue; color: black; font-size: 100%; width:10%; text-align:center; -webkit-gradient(linear, 0 0, 0 100%, from(#6eb6de), to(#4a77d4))} </STYLE>
+			<form method="post" th:action="@{/accueil_sondage2}" >
+			<input type="hidden" name="sondageId" th:value="${sondage.idsondages}"/>
+			<button type="submit" name="submit" >Supprimer</button>
+				<STYLE>a .text_inscription {font-family:'Open Sans', sans-serif; border-radius: 15px; background-color: #4a77d4; color: white; font-size: 100%; width:10%; text-align:center; -webkit-gradient(linear, 0 0, 0 100%, from(#6eb6de), to(#4a77d4))} </STYLE>
+				<STYLE>a .text_inscription:hover {font-family:'Open Sans', sans-serif; border-radius: 15px; cursor:pointer; background-color: lightblue; color: black; font-size: 100%; width:10%; text-align:center; -webkit-gradient(linear, 0 0, 0 100%, from(#6eb6de), to(#4a77d4))} </STYLE>
 				<!-- </nav> -->
-			</a>
+			</form>
+
+
+
 			
 		<hr>
 		

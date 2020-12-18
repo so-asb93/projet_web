@@ -5,10 +5,7 @@ import com.example.urbinoennasri.model.Sondages;
 import com.example.urbinoennasri.service.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import com.example.urbinoennasri.model.Users;
 
@@ -29,10 +26,10 @@ public class Controller {
         modelAndView.setViewName("errorfile");
         return modelAndView;    }
 
-    @RequestMapping(value = "/authentification", method = RequestMethod.GET)
+    @RequestMapping(value = "/authentification2", method = RequestMethod.GET)
     public ModelAndView connexion() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("authentification");
+        modelAndView.setViewName("authentification2");
         return modelAndView;
     } // Requête pour afficher une page hmtl
 
@@ -43,20 +40,23 @@ public class Controller {
         ModelAndView modelAndView = new ModelAndView();
         List<Sondages> listSondages = new ArrayList<>();
         listSondages = service.findSondages();
+
         System.out.println("sondages = " + listSondages.toString());
         modelAndView.addObject("listSondages",listSondages);
         modelAndView.setViewName("accueil_sondage2");
         return modelAndView;
     } // Requête pour afficher une page hmtl
 
-    @RequestMapping(value = "/accueil_sondage2/{sondageId}", method = RequestMethod.DELETE)
-    public ModelAndView deleteSondage(@PathVariable("sondageId") int sondageId) {
+    @RequestMapping(value = "/accueil_sondage2", method = RequestMethod.POST)
+    public ModelAndView deleteSondage(@RequestParam("sondageId") String sondageId) {
 
+        Integer ID = Integer.parseInt(sondageId);
+        Sondages sondage = service.searchTheSondage(ID);
+        service.supprime(sondage);
         ModelAndView modelAndView = new ModelAndView();
 
-        service.supprime(sondageId);
 
-        modelAndView.setViewName("accueil_sondage2");
+        modelAndView.setViewName("redirect:/accueil_sondage2");
         return modelAndView;
     } // Requête pour supprimer
 

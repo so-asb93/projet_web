@@ -24,10 +24,10 @@ public class IService implements Service{
         return listSondages;
     }
 
+    @Override
+    public void supprime (Sondages sondage) {
 
-    public void supprime (int sondageId) {
-
-        srepository.supprime(sondageId);
+        srepository.delete(sondage);
     }
 
     @Override
@@ -41,4 +41,10 @@ public class IService implements Service{
 
         srepository.save(sondage);
     }
+
+    @Override
+    public Sondages searchTheSondage(int sondageId){
+        return srepository.searchTheSondage(sondageId);
+    }
+
 }

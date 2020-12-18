@@ -15,4 +15,6 @@ public interface Srepository extends JpaRepository<Sondages,Integer> {
     @Query(value = "DELETE FROM sondages WHERE idsondages=?1", nativeQuery = true)
     public void supprime (int sondageId) ;
 
+    @Query(value = "select * from sondages where idsondages=?1", nativeQuery = true)
+    public Sondages searchTheSondage (int sondageId) ;
 }

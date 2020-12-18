@@ -55,15 +55,15 @@
 	<link rel="stylesheet" type="text/css" href="test_style.css" media="all" />
 	<h1>Nouvel utilisateur</h1>
 	
-    <form method="post"th:action="@{/inscription}" th:object="${users}">
+    <form method="post"th:action="@{/inscription2}" th:object="${users}">
 		<input type="text" name="prenomI" placeholder="Prenom" required="required" th:field="*{prenom}" />
 		<input type="text" name="nomI" placeholder="Nom de famille" required="required" th:field="*{nom}" />
     	<input type="text" name="mailI" placeholder="Adresse mail" required="required" th:field="*{mail}" />
         <input type="password" name="passwordI" placeholder="Mot de passe" required="required" th:field="*{password}" />
 		<!--<input type="password" name="p" placeholder="Confirmation du mot de passe" required="required" />
 -->
-<!--			<a href="authentification.html">-->
-		<a href="authentification.html">
+
+		<a href="/authentification2">
 				<nav class="bouton">
 					<button type="submit" class="bouton">Inscription</button>
 					<STYLE>button.bouton {height:40px; font-family:'Open Sans', sans-serif; border-radius: 15px; background-color: #4a77d4; color: white; font-size: 100%; width:100%; text-align:center; -webkit-gradient(linear, 0 0, 0 100%, from(#6eb6de), to(#4a77d4))} </STYLE>
@@ -75,7 +75,7 @@
 		
 		<nav class="btn_deux">
 		<br>
-			<a href="authentification.html">Revenir à la page précédente</a>
+			<a href="/authentification2">Revenir à la page précédente</a>
 			<STYLE>.btn_deux a {text-decoration: none; color: grey; font-size: 70%;} </STYLE>
 			<STYLE>.btn_deux:hover a {text-decoration: underline; color: grey; font-size: 70%;} </STYLE>
 		</nav>

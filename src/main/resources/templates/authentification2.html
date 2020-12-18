@@ -60,11 +60,11 @@
 
 		<h1>Bienvenue</h1>
 		
-			<form th:action="@{/authentification}" method="post">
+			<form th:action="@{/authentification2}" method="post">
 				<input type="text" name="u" placeholder="Adresse mail" required="required" />
 				<input type="password" name="p" placeholder="Mot de passe" required="required" />
 
-<!--				<a href="accueil_sondage.html">-->
+
 				<!-- <nav class="btn btn-primary btn-block btn-large"> -->
 					<input id="submit" type="submit" value="Connexion" />
 					<STYLE>input#submit {height:40px; font-family:'Open Sans', sans-serif; border-radius: 15px; background-color: #4a77d4; color: white; font-size: 100%; width:100%; text-align:center; -webkit-gradient(linear, 0 0, 0 100%, from(#6eb6de), to(#4a77d4))} </STYLE>
@@ -82,7 +82,7 @@
 					<!-- <br> -->
 				<!-- </nav> -->
 				<nav class="btn_trois">
-					<a href="inscription.html">Vous n'êtes pas inscrit ? Incrivez vous !</a>
+					<a href="/inscription2">Vous n'êtes pas inscrit ? Incrivez vous !</a>
 					<STYLE>.btn_trois a {text-decoration: none; color: grey; font-size: 70%;} </STYLE>
 					<STYLE>.btn_trois:hover a {text-decoration: underline; color: grey; font-size: 70%;} </STYLE>
 				</nav>
